@@ -3895,6 +3895,9 @@ textarea.input-group-sm > .input-group-btn > .btn {
   padding-left: 7px;
   padding-right: 7px;
 }
+#searchform {
+  display: none;
+}
 .breadcrumb {
   padding: 8px 15px;
   margin-bottom: 20px;
