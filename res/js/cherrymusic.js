@@ -1223,4 +1223,6 @@ $(document).ready(function(){
     $('#ui-display_album_art').click(function() {
         $('#albumart').toggle($('#ui-display_album_art').attr('checked'), 0);
     });
+
+    window.setTimeout(showPlaylists, 100); // show playlist on startup
 });
