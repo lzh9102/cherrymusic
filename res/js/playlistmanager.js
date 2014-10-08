@@ -765,13 +765,9 @@ PlaylistManager.prototype = {
             }
             // only show id tags if at least artist and title are known
             if (metainfo.title.length > 0 && metainfo.artist.length > 0) {
-                track.title = metainfo.artist+' - '+metainfo.title;
-                if(metainfo.track.length > 0){
-                    track.title = metainfo.track + ' ' + track.title;
-                    if(metainfo.track.length < 2){
-                        track.title = '0' + track.title;
-                    }
-                }
+                track.title = metainfo.title + ' - ' + metainfo.artist
+                    + ' (' + self.getEditingPlaylist().jplayerplaylist._formatTime(track.duration)
+                    + ')';
                 any_info_received = true;
             }
             if(any_info_received){
