@@ -5378,9 +5378,8 @@ body:after {
   color: #000000;
 }
 .playlist-container .jp-playlist-playtime {
-  float: left;
+  float: right;
   margin: 0 5px 0 0;
-  display: none;
 }
 @media (min-width: 950px) {
   .playlist-container-parent {
