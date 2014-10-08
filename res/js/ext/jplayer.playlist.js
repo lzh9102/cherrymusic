@@ -259,12 +259,15 @@
             '  </ul>'+
             '</div>';
             
-			// Create Playtime
-            if(media.duration){
-                listItem += "<span href='javascript:;' class='" + this.options.playlistOptions.playtimeClass + "'>"+self._formatTime(media.duration)+"</span>";
-            }
 			// Create remove control
 			listItem += "<a href='javascript:;' class='" + this.options.playlistOptions.removeItemClass + "'>&times;</a>";
+
+			// Create Playtime
+			if(media.duration){
+				listItem += "<span href='javascript:;' class='"
+					+ this.options.playlistOptions.playtimeClass + "'>"
+					+ self._formatTime(media.duration)+"</span>";
+			}
             
 
 			// Create links to free media
