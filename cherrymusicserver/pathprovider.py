@@ -33,6 +33,7 @@ import os
 import sys
 import base64
 import codecs
+import hashlib
 
 userDataFolderName = 'cherrymusic'  # $XDG_DATA_HOME/userDataFolderName
 pidFileName = 'cherrymusic.pid'     # $XDG_DATA_HOME/userDataFolderName/cherrymusic.pid
@@ -122,8 +123,13 @@ def albumArtFilePath(directorypath):
     albumartcachepath = os.path.join(getUserDataPath(), 'albumart')
     if not os.path.exists(albumartcachepath):
         os.makedirs(albumartcachepath)
-    configpath = os.path.join(albumartcachepath, base64encode(directorypath))
+    configpath = os.path.join(albumartcachepath, computeHash(directorypath))
     return configpath
+
+def computeHash(s):
+    utf8_bytestr = codecs.encode(s, 'UTF-8')
+    hashobj = hashlib.sha256(utf8_bytestr)
+    return hashobj.hexdigest()
 
 def base64encode(s):
     utf8_bytestr = codecs.encode(s, 'UTF-8')
