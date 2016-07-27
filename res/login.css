@@ -56,24 +56,24 @@ html,body{
     font-size: 12px;
 }
 
-input[name="login"], input[name="username"], input[name="password"] {
+input[type="submit"], input[type="text"], input[type="password"] {
     background-image: url(img/button-stripe.png);
     background-repeat: repeat;
     border-radius: 5px;
 }
 
-input[name="username"], input[name="password"] {
+input[type="text"], input[type="password"] {
     border: none;
     padding: 1px 3px 1px 3px;
 }
 
-input[name="login"] {
+input[type="submit"] {
     border: #000 1px solid;
     cursor: pointer;
     box-shadow: 1px 1px 4px #eee inset, -1px -1px 4px #eee inset;
 }
 
-input[name="login"]:hover, input:focus {
+input[type="submit"]:hover, input:focus {
     filter: brightness(115%);
     -moz-filter: brightness(115%);
     -webkit-filter: brightness(115%);
