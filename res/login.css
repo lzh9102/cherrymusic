@@ -70,11 +70,11 @@ input[name="username"], input[name="password"] {
 input[name="login"] {
     border: #000 1px solid;
     cursor: pointer;
+    box-shadow: 1px 1px 4px #eee inset, -1px -1px 4px #eee inset;
 }
 
-input[name="login"]:hover {
-    filter: brightness(110%);
-    -moz-filter: brightness(110%);
-    -webkit-filter: brightness(110%);
-    box-shadow: 1px 1px 4px #eee inset, -1px -1px 4px #eee inset;
+input[name="login"]:hover, input:focus {
+    filter: brightness(115%);
+    -moz-filter: brightness(115%);
+    -webkit-filter: brightness(115%);
 }
