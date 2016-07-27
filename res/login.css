@@ -56,12 +56,19 @@ html,body{
     font-size: 12px;
 }
 
-input[name="login"] {
+input[name="login"], input[name="username"], input[name="password"] {
     background-image: url(img/button-stripe.png);
     background-repeat: repeat;
-    border: #000 1px solid;
     border-radius: 5px;
-    box-shadow: 1px 1px 4px #eee inset, -1px -1px 4px #eee inset;
+}
+
+input[name="username"], input[name="password"] {
+    border: none;
+    padding: 1px 3px 1px 3px;
+}
+
+input[name="login"] {
+    border: #000 1px solid;
     cursor: pointer;
 }
 
@@ -69,4 +76,5 @@ input[name="login"]:hover {
     filter: brightness(110%);
     -moz-filter: brightness(110%);
     -webkit-filter: brightness(110%);
+    box-shadow: 1px 1px 4px #eee inset, -1px -1px 4px #eee inset;
 }
